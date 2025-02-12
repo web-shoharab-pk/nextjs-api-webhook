@@ -141,13 +141,6 @@ nextjs-api-webhook/
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-```
-JWT_SECRET=your_jwt_secret
-MONGODB_URI=your_mongodb_uri
-WEBHOOK_SECRET=your_webhook_secret
-```
-
-
 ## How to use
 
 1. Clone the repository
