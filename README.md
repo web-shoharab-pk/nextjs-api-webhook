@@ -33,7 +33,7 @@ WEBHOOK_SECRET=your_webhook_secret
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/web-shoharab-pk/nextjs-api-webhook.git
 cd nextjs-api-webhook
 ```
 
@@ -102,33 +102,30 @@ Example webhook payload:
 ## Project Structure
 
 ```
-
 nextjs-api-webhook/
-│── .env
-│── .gitignore
-│── package.json 
-│── next.config.js
-│── db.json # Webhook data storage
-│── public/ # Static assets (if any)
+│── .env                          # Environment variables
+│── .gitignore                    # Git ignore file
+│── package.json                  # Project dependencies and scripts
+│── next.config.js               # Next.js configuration
+│── db.json                      # Webhook payload storage
 │── pages/
 │   ├── api/
-│   │ ├── users 
-│   │ │    ├── [id].js # Fetch single user by ID
-│   │ │    ├── index.js # User API (CRUD & Auth)
-│   │ ├── webhook.js # Webhook API
-│   │ ├── generateSignature.js # Generate webhook signature
-│   │ ├── auth.js # JWT authentication
-│   │ 
+│   │   ├── users/
+│   │   │   ├── [id].js         # Get user by ID endpoint
+│   │   │   └── index.js        # User registration endpoint
+│   │   ├── webhook.js          # Webhook endpoint for receiving payloads
+│   │   ├── generateSignature.js # Generate HMAC signature for webhooks
+│   │   └── auth.js             # User authentication endpoint
 │── models/
-│ ├── User.js # Mongoose user schema
+│   └── User.js                  # MongoDB user model schema
 │── middleware/
-│ ├── authMiddleware.js # JWT authentication middleware
+│   └── authMiddleware.js        # JWT authentication middleware
 │── utils/
-│ ├── dbConnect.js # MongoDB connection
-│ ├── verifySignature.js # Webhook signature validation
-│ ├── validators.js # Joi validation schemas
-│ ├── auth.js # JWT authentication
-│── README.md # Project documentation
+│   ├── dbConnect.js            # MongoDB connection utility
+│   ├── verifySignature.js      # Webhook signature verification
+│   ├── validators.js           # Joi validation schemas
+│   └── auth.js                 # JWT token management
+└── README.md                    # Project documentation
 
 ```
 
