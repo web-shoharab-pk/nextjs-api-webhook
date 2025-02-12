@@ -1,0 +1,8 @@
+{
+  "eventType": "user.created",
+  "data": {
+    "id": "67ac22ea42a937735ea0ac78",
+    "name": "John Doe1",
+    "email": "testemail@gmail.com"
+  }
+}
